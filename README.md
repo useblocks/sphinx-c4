@@ -10,3 +10,5 @@ Brings the C4 model into sphinx
 * [Structurizr JS Viewer](https://github.com/structurizr/ui)
   * Used for the above example
   * MIT license
+* [Python interface for the structurizer JSON format](https://github.com/nielsvanspauwen/pystructurizr)
+  * Could be used to generate the json and use the `ui` to show it
