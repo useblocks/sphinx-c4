@@ -21,9 +21,9 @@ Structurizer DSL online editor: https://structurizr.com/dsl
 
 * We document the system, container, component level only.
 * Documenting/Design the code architecture itself is not a topic
- * This is also often not done by teams, as the code is the truth
- *  The smallest code artifact, which can be checked against the architecture is the "SW Component"
- *  If more sw architecture is needed, another extension for SysML and other formats may be needed
+  * This is also often not done by teams, as the code is the truth
+  *  The smallest code artifact, which can be checked against the architecture is the "SW Component"
+  *  If more sw architecture is needed, another extension for SysML and other formats may be needed
 
 
 
