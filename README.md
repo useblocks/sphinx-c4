@@ -68,7 +68,7 @@ However, the support for this format is very limited in other tools and especial
 
 ## Example
 
-**Hint**: All images are just roughly designed. The final images will contain the looks from the C4 model by 100%.
+
 
 ```rst
 
@@ -96,16 +96,36 @@ However, the support for this format is very limited in other tools and especial
 .. system:: E-Mail System
    :id: email
    :existing:
-   :links: customer
-   :links_text: Sends e-mails to
+   :links: customer[Sends e-mails to]
 
    The internal Microsoft Exchange e-mail system.
 
+
+.. container:: API Application
+   :id: api
+   :system: banking
+   :links: db(Reads from and writes to[SQL/TCP]), email(Makes API calls to[XML/HTTPS]), mainframe(Makes API calls to[XML/HTTPS])
+   :technology: Java and Spring MVC
+   :style: default # Could be also mobile, webbrowser
+
+   Provides Internet banking functionallity via a JSON/HTTPS API.
+   
+[More containers in the pictures below exist, but are not written down for this example (I'm lazy, sorry :) )]
+
 ```
 
-The `banking` system as need may look like this:
+### Representations
+**Hint**: All images are just roughly designed. The final images will contain the looks from the C4 model by 100%.
+
+#### System: Banking system
 
 ![](need_system_banking.drawio.png)
+
+
+#### Container: API Application
+
+![](need_container_api.drawio.png)
+
 
 
 A need-type independant view could be created by `needc4` and look like:
@@ -113,3 +133,19 @@ A need-type independant view could be created by `needc4` and look like:
 ![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
 
 
+## Challenges
+
+* Some links are going from the System level into the Container level, e.g. a Customer is linked to a multiple containers (web app, mobile app).
+  But not to the system (here "Banking system"), even if this link is shown on system-level pictures.
+  So some graphical connections needs be derived from existing, deeper going links.
+* All the views in the C4 model examples are showing the diagrams from a upper view point, with context to an upper element.
+  For instance, the container view is showing all the containers from System "Banking system" and is not related to a specific container, just the system.
+  Same for the component view, which is showing all Components of e.g. the API container.
+
+  In our Sphinx-Needs <-> C4 mapping, this kind of view is only available on the "upper" level. So to see and understand the whole container interactions, you have to 
+  go to the system, to get the picture. The container view in the container itself is just related to the current shown container. Otherwise all containers of a system, would
+  show the same container view picture, which brings to benefit. Therefore the added context to the current container in the container view.
+
+## New functions for Sphinx-Needs
+
+* **Labled links** are needed, in best case with two arguments, as C4 needs a descript like "Makes API calls" and the used technology. for instance "REST/HTTPS".
