@@ -68,6 +68,8 @@ However, the support for this format is very limited in other tools and especial
 
 ## Example
 
+**Hint**: All images are just roughly designed. The final images will contain the looks from the C4 model by 100%.
+
 ```rst
 
 .. person:: Personal Banking Customer
@@ -99,9 +101,6 @@ However, the support for this format is very limited in other tools and especial
 
    The internal Microsoft Exchange e-mail system.
 
-.. needc4:: System landscape view
-   :root_id: banking
-
 ```
 
 The `banking` system as need may look like this:
@@ -109,7 +108,7 @@ The `banking` system as need may look like this:
 ![](need_system_banking.drawio.png)
 
 
-This should create an image like
+A need-type independant view could be created by `needc4` and look like:
 
 ![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
 
