@@ -74,16 +74,14 @@ However, the support for this format is very limited in other tools and especial
 
 .. person:: Personal Banking Customer
    :id: customer
-   :links: banking
-   :links_text: View account balances, and make payments using
+   :links: banking( View account balances, and make payments using)
 
    A customer of the bank, with personal bank accounts.
    
 
 .. system:: Internet banking
    :id: banking
-   :links: mainframe, email
-   :links_text: Gets account information from and makes payments using:: Sends e-mail using
+   :links: mainframe(Gets account information from and makes payments using), email(Sends e-mail using)
 
    Allows customers to view information about their bank accounts, and make payments.
 
