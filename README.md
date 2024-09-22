@@ -187,3 +187,10 @@ A need-type independant view could be created by a `needc4` directive, and look 
 ## New functions for Sphinx-Needs
 
 * **Labled links** are needed, in best case with two arguments, as C4 needs a descript like "Makes API calls" and the used technology. for instance "REST/HTTPS".
+
+Open points:
+
+* ``needc4`` directive needs to be specified and especially the way how to use it.
+  * How to get the complete system/container view of a given system
+  * How to combine two or ore systems?
+  * How to show the components of multiple containers in one picture? How to select the needed container-components to show?
