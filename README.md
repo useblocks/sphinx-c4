@@ -110,7 +110,15 @@ However, the support for this format is very limited in other tools and especial
 
    Provides Internet banking functionallity via a JSON/HTTPS API.
    
-[More containers in the pictures below exist, but are not written down for this example (I'm lazy, sorry :) )]
+.. component:: E-Mail Component
+   :id: email
+   :container: api
+   :links: email(Sends email using)
+   :technology: Spring Bean
+
+   Sends e-mails to user.
+
+[More containers and components in the pictures below exist, but are not written down for this example (I'm lazy, sorry :) )]
 
 ```
 
@@ -133,6 +141,7 @@ However, the support for this format is very limited in other tools and especial
 
 
 #### Element-unspecific views (System, Container, Component)
+**Hint:** Taken from https://c4model.com/diagrams/component and co.
 
 A need-type independant view could be created by a `needc4` directive, and look like:
 
