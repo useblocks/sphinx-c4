@@ -136,9 +136,9 @@ However, the support for this format is very limited in other tools and especial
 
 A need-type independant view could be created by a `needc4` directive, and look like:
 
-![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png | width=30)
+![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
 
-![Container view](https://static.structurizr.com/workspace/76749/diagrams/Components.png | width=30)
+![Container view](https://static.structurizr.com/workspace/76749/diagrams/Components.png)
 
 
 ## Rules
