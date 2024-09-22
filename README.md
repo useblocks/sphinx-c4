@@ -104,6 +104,11 @@ However, the support for this format is very limited in other tools and especial
 
 ```
 
+The `banking` system as need may look like this:
+
+![](need_system_banking.drawio.png)
+
+
 This should create an image like
 
 ![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
