@@ -127,8 +127,14 @@ However, the support for this format is very limited in other tools and especial
 ![](need_container_api.drawio.png)
 
 
+#### Component: E-Mail 
 
-A need-type independant view could be created by `needc4` and look like:
+![](need_component_email.drawio.png)
+
+
+#### Element-unspecific views (System, Container, Component)
+
+A need-type independant view could be created by a `needc4` directive, and look like:
 
 ![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
 
@@ -159,6 +165,13 @@ A need-type independant view could be created by `needc4` and look like:
   In our Sphinx-Needs <-> C4 mapping, this kind of view is only available on the "upper" level. So to see and understand the whole container interactions, you have to 
   go to the system, to get the picture. The container view in the container itself is just related to the current shown container. Otherwise all containers of a system, would
   show the same container view picture, which brings to benefit. Therefore the added context to the current container in the container view.
+* Automotive needs for SW architecture Specification (Detailed design): C4 does not support it, others like SysML do. 
+  **Do we need to add another level?** By Sphinx-Needs objects (e.g. runnables, interfaces) and their automatic creation from specs (SysML, ArchiMed, ...) or code?
+
+* **What can be automated?**
+  * Components creation from soruce code? (commercial service?)
+  * UML-Diagram creation and especially linking to components (commercial?)
+  * Checking source code elements against containers/compoents? (commercial?)
 
 ## New functions for Sphinx-Needs
 
