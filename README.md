@@ -181,19 +181,19 @@ A need-type independant view could be created by a `needc4` directive, and look 
   **Do we need to add another level?** By Sphinx-Needs objects (e.g. runnables, interfaces) and their automatic creation from specs (SysML, ArchiMed, ...) or code?
 
 * **What can be automated?**
-  * Components creation from soruce code? (commercial service?)
+  * Components creation from source code? (commercial service?)
   * UML-Diagram creation and especially linking to components (commercial?)
-  * Checking source code elements against containers/compoents? (commercial?)
+  * Checking source code elements against containers/componets? (commercial?)
 
 ## New functions for Sphinx-Needs
 
-* **Labled links** are needed, in best case with two arguments, as C4 needs a descript like "Makes API calls" and the used technology. for instance "REST/HTTPS".
+* **Labled links** are needed, in best case with two arguments, as C4 needs a description like "Makes API calls" and the used technology. For instance "REST/HTTPS".
 
-Open points:
+## Open points:
 
 * ``needc4`` directive needs to be specified and especially the way how to use it.
   * How to get the complete system/container view of a given system
-  * How to combine two or ore systems?
+  * How to combine two or more systems?
   * How to show the components of multiple containers in one picture? How to select the needed container-components to show?
 * **BUG**: "links incoming" is often not correct, as the incoming links are connected to a component inside the container.
-  E.g. "Mobile app" does not have an incoming link to "API Application, but to components (like !SignIn", "PW reset").
+  E.g. "Mobile app" does not have an incoming link to container "API Application", but to components (like "SignIn", "PW reset").
