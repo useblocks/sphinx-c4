@@ -118,7 +118,8 @@ However, the support for this format is very limited in other tools and especial
 
    Sends e-mails to user.
 
-[More containers and components in the pictures below exist, but are not written down for this example (I'm lazy, sorry :) )]
+// More containers and components exist in the pictures below, but are not written 
+// down for this example. I'm lazy, sorry :)
 
 ```
 
