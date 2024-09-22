@@ -195,3 +195,5 @@ Open points:
   * How to get the complete system/container view of a given system
   * How to combine two or ore systems?
   * How to show the components of multiple containers in one picture? How to select the needed container-components to show?
+* **BUG**: "links incoming" is often not correct, as the incoming links are connected to a component inside the container.
+  E.g. "Mobile app" does not have an incoming link to "API Application, but to components (like !SignIn", "PW reset").
