@@ -133,6 +133,20 @@ A need-type independant view could be created by `needc4` and look like:
 ![System view](https://static.structurizr.com/workspace/76749/diagrams/SystemContext.png)
 
 
+## Rules
+
+* A container must define the system, it belongs to
+* A component must define the container, it belongs to.
+* Links from elements are going **top-down**, sideward (same level) or to existings systems (which are not more detailed)
+  * A **system** links to other systems or to container
+  * A **container** links to other containers or to components
+  * A **component** links to other components or existing systems (e.g. e-mail componets sends email via existing "E-Mail system")
+* Graphical representations of **bottom-up** links are automatically calculated. 
+  * For instance: If the "banking system" is using the existing "E-Mail system", this is know because the component "E-mail component" of a container in the "banking system" is using the
+    existing "E-Mail System".
+
+
+
 ## Challenges
 
 * Some links are going from the System level into the Container level, e.g. a Customer is linked to a multiple containers (web app, mobile app).
