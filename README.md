@@ -96,7 +96,7 @@ However, the support for this format is very limited in other tools and especial
 .. system:: E-Mail System
    :id: email
    :existing:
-   :links: customer[Sends e-mails to]
+   :links: customer(Sends e-mails to)
 
    The internal Microsoft Exchange e-mail system.
 
