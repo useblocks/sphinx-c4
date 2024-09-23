@@ -26,8 +26,6 @@ Structurizer DSL online editor: https://structurizr.com/dsl
   *  If more sw architecture is needed, another extension for SysML and other formats may be needed
 
 
-
-
 ## Tasks
 
 ### Keep it simple
@@ -51,6 +49,14 @@ However, the support for this format is very limited in other tools and especial
 4. **TBD**: Provide ``needview`` to define a customc4-based view
 
 
+## Use cases
+
+* Document higher-level architecture elements.
+* Link requirements against architecture elements.
+* Link code elements against architecture elements.
+* Link test cases and results against architecture elements.
+* Run checks against the network of requirements, architecture, implementation and tests.
+
 ## Needed Sphinx-Needs types
 
 * Common
@@ -66,15 +72,30 @@ However, the support for this format is very limited in other tools and especial
 * Component
   * Component
 
+## Structure
+
+```rst
+
+.. container:: <Element title>
+   :id: <unique id>
+   :system/container: <id of upper element> # E.g. to which system a container belongs to
+   :links: <IDs + text to other elements>
+   :technology: <Used technologoy for implmenetation>  # Used as "subtitle" in graphical representations
+   :style: <default, mobile or webbrowser>  # Graphical representation of a container, "default" ist default
+   :existing:  # Flag for systems only, if it already exists
+   
+   Short descript Sentence. First paragraph is taken for this in the graphical repesentation.
+
+   Longer description, not used for graphical representation.  Can contain everything from Sphinx.
+```
+
 ## Example
-
-
 
 ```rst
 
 .. person:: Personal Banking Customer
    :id: customer
-   :links: banking( View account balances, and make payments using)
+   :links: banking(View account balances, and make payments using)
 
    A customer of the bank, with personal bank accounts.
    
@@ -195,3 +216,6 @@ A need-type independant view could be created by a `needc4` directive, and look 
   * How to show the components of multiple containers in one picture? How to select the needed container-components to show?
 * **BUG**: "links incoming" is often not correct, as the incoming links are connected to a component inside the container.
   E.g. "Mobile app" does not have an incoming link to container "API Application", but to components (like "SignIn", "PW reset").
+* What about other diagram types: [Deploy diagram](https://c4model.com/diagrams/deployment), [Dynamic/Sequence diagram](https://c4model.com/diagrams/dynamic).
+  * How to implement these?
+  * For deployment, additional elements like "AWS S3" or "Azure functions" are usefull.
