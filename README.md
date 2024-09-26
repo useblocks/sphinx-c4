@@ -219,3 +219,34 @@ A need-type independant view could be created by a `needc4` directive, and look 
 * What about other diagram types: [Deploy diagram](https://c4model.com/diagrams/deployment), [Dynamic/Sequence diagram](https://c4model.com/diagrams/dynamic).
   * How to implement these?
   * For deployment, additional elements like "AWS S3" or "Azure functions" are usefull.
+
+ ## Configuration
+
+```python
+
+need_types = [system, container, ...]  # Already exists
+
+arch_needs = {  # OrderedDict! Herachie structures the levels!
+  "level_1": {  # e.g. "system"
+    "types": ["system"],
+    "links: ["connects", "calls"]  # 
+    "paint_func" = my_painter(needs, context_need, arch_conf)  # Outcome: Image to integrate
+  },
+  "level_2": {  # e.g. "container"
+    "types": ["container", "mobile_container", "webapp_container"],
+    "links: ["links"]
+    "paint_func" = my_painter(needs, context_need, arch_conf)
+  }, ...
+}
+```
+From the above configuration, the following elements are created:
+* link_types, with the name of the level, so for C4: system, container, component
+* A jinja function for usage in need_templates, which integrates a flow-chart painted by the paint_function. Name: ``<level>_paint``, e.g. ``system_paint()``.
+* For each "level" a directive is created, called `need_<level>`, e.g. `need_system`, which is using the paint function to integrate a diagram. The directive fully supports the filter functions, but on arch need types only.
+
+During resolving need objects, the following happens for all architecture needs:
+* It is detected, to which upper need element they belong (container to a system).
+* Based on this information, indirect links are derived and set (container in system A links to container in system B, so system A links to system B).
+  So the Architecture becomes a hierarchical tree 
+
+
