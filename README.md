@@ -241,7 +241,7 @@ arch_needs = {  # OrderedDict! Herachie structures the levels!
 ```
 From the above configuration, the following elements are created:
 * link_types, with the name of the level, so for C4: system, container, component
-* For each "level" a directive is created, called `need_<level>`, e.g. `need_system`, which is using the paint function to integrate a diagram. The directive fully supports the filter functions, but on arch need types only.
+* For each "level" a directive is created, called `needarch_<level>`, e.g. `need_system`, which is using the paint function to integrate a diagram. The directive fully supports the filter functions, but on arch need types only.
 
 During resolving need objects, the following happens for all architecture needs:
 * It is detected, to which upper need element they belong (container to a system).
