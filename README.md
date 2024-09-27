@@ -230,7 +230,7 @@ arch_needs = {  # OrderedDict! Herachie structures the levels!
   "level_1": {  # e.g. "system"
     "types": ["system"],
     "links: ["connects", "calls"]  # 
-    "paint_func" = my_painter(needs, context_need, arch_conf)  # Outcome: Image to integrate
+    "paint_func" = my_painter(needs, context_need, arch_conf)  # Outcome: Image to integrate // Tech: Module string, which gets imported
   },
   "level_2": {  # e.g. "container"
     "types": ["container", "mobile_container", "webapp_container"],
